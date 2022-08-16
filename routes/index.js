@@ -4,7 +4,7 @@ const router = express.Router();
 const path = require("path");
 
 router.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "/../pages/index.html"));
+  res.render("index", {name: 'MINk'});
 });
 
 router.get("/about", (req, res) => {

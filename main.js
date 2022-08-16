@@ -3,6 +3,7 @@ const express = require("express");
 // const myEvent = new EventEmitter();
 const app = express();
 const PORT = 5000;
+app.set('view engine', 'pug')
 
 const routes = require("./routes/index");
 
