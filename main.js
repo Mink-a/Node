@@ -11,8 +11,12 @@ myEvent.on("test-event", (data) => {
 });
 
 app.get("/", (req, res) => {
-  myEvent.emit("test-event", {name: 'MInk'});
+  myEvent.emit("test-event", { name: "MInk" });
   res.send("helo");
+});
+
+app.post("/", (req, res) => {
+  res.json({ greet: "helo" });
 });
 
 app.listen(PORT, () => {
